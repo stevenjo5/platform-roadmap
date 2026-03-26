@@ -1,15 +1,14 @@
 #!/bin/bash
 
-# 1. Create a variable for today's date
 DATE=$(date +%Y-%m-%d)
 
-echo "--- System Report for $DATE ---"
+echo "--- System Health Check: $DATE ---"
 
-# 2. Check Disk Space and save only the 'Percentage used' line
-echo "Checking Disk Space..."
-df -h | grep "/$"
+USAGE=$(df / | grep / | awk ' {print $5}'| sed 's/%//g' )
 
-# 3. Create a backup folder if it doesn't exist
-mkdir -p ~/backups
-
-echo "--- Report Complete ---"
+if [ "$USAGE" -gt 60 ]; then 
+    echo "⚠️  CRITICAL: Disk usage is at $USAGE%!"
+else 
+    echo "✅ SUCCESS: Disk usage is safe at $USAGE%."
+fi 
+    echo "--- Check Finished ---" 
