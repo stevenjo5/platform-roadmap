@@ -11,7 +11,7 @@ if [ "$USAGE" -gt 60 ]; then
     echo "⚠️  CRITICAL: Disk usage is at $USAGE%!"
     
   cleanup_logs
-else 
+else
     echo "✅ SUCCESS: Disk usage is safe at $USAGE%."
 fi 
     echo "--- Check Finished ---" 
