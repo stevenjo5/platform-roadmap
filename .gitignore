@@ -1,0 +1,19 @@
+.aws/
+credentials
+config
+*.pem
+# System Clutter (New)
+.bash*
+.cache/
+.vscode-server/
+.landscape/
+.sudo_as_admin_successful
+.profile
+.motd_shown
+awscliv2.zip
+a.out
+sh
+.gitconfig
+.lesshst
+files
+files.txt
