@@ -17,3 +17,7 @@ sh
 .lesshst
 files
 files.txt
+# SSH Keys (NEVER PUSH THESE)
+.ssh/
+id_ed25519*
+aws/
