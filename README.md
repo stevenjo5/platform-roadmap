@@ -32,4 +32,18 @@ The failure originated from an inconsistency in the Windows Host Network Service
 #### Operational Takeaway
 This incident demonstrated the limitations of default virtualised network stacks. The successful Day 10 resolution proved the ability to perform deep-dive infrastructure debugging and implement manual overrides to maintain service availability.
 
+### SSH Infrastructure & Authentication (Day 11)
+- **Standard**: Migrated repository authentication from HTTPS to **SSH (Ed25519)**.
+- **Security**: Implemented passphrase-protected private keys to secure the local-to-remote delivery pipeline.
+- **Validation**: Confirmed successful handshake with GitHub's SSH gateway.
+
+## Software & Package Management
+
+### Linux Package Infrastructure (Day 12)
+- **Standard**: Utilized `apt` for enterprise-grade software lifecycle management.
+- **Competencies**: 
+    - Performed system audits via `apt update` and `apt list --upgradable`.
+    - Automated software provisioning using non-interactive flags (`-y`).
+    - Implemented system hygiene protocols using `autoremove` to minimize the system's footprint.
+- **Tools**: `apt`, `htop`.
 
