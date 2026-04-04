@@ -47,3 +47,12 @@ This incident demonstrated the limitations of default virtualised network stacks
     - Implemented system hygiene protocols using `autoremove` to minimize the system's footprint.
 - **Tools**: `apt`, `htop`.
 
+## Version Control & CI/CD Standards
+
+### Production Git Workflows (Day 14)
+- **Branching Strategy**: Implemented **Feature Branching** (`feature/refactor-reporting`) to isolate development from the stable `main` branch.
+- **Peer Review Lifecycle**: Executed a full **Pull Request (PR)** on GitHub, simulating an industry-standard code review and merge process.
+- **Incident: Push Rejection (Upstream Out-of-Sync)**:
+    - **Problem**: Encountered `error: failed to push some refs` due to local history trailing behind the remote origin.
+    - **Remediation**: Synchronised local environment via `git pull origin main` and merged upstream changes into the feature branch before re-attempting the push.
+- **Hygiene**: Practiced post-merge branch deletion to maintain repository cleanliness.
