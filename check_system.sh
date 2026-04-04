@@ -14,4 +14,4 @@ if [ "$USAGE" -gt 60 ]; then
 else
     echo "✅ SUCCESS: Disk usage is safe at $USAGE%."
 fi 
-    echo "--- Check Finished ---" 
+    echo "--- System Audit Complete ---" 
