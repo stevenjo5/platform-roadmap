@@ -56,3 +56,12 @@ This incident demonstrated the limitations of default virtualised network stacks
     - **Problem**: Encountered `error: failed to push some refs` due to local history trailing behind the remote origin.
     - **Remediation**: Synchronised local environment via `git pull origin main` and merged upstream changes into the feature branch before re-attempting the push.
 - **Hygiene**: Practiced post-merge branch deletion to maintain repository cleanliness.
+
+## Process & Resource Management
+
+### Linux Process Lifecycle (Day 15)
+- **Monitoring**: Utilised `ps aux` and `pstree` to audit system-wide process hierarchies and resource consumption.
+- **Signal Management**: 
+    - Mastered the distinction between **SIGTERM (15)** for graceful service termination and **SIGKILL (9)** for non-responsive process remediation.
+    - Practiced background process execution using the ampersand (`&`) operator.
+- **Tools**: `ps`, `kill`, `htop`.
