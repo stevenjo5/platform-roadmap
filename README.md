@@ -65,3 +65,9 @@ This incident demonstrated the limitations of default virtualised network stacks
     - Mastered the distinction between **SIGTERM (15)** for graceful service termination and **SIGKILL (9)** for non-responsive process remediation.
     - Practiced background process execution using the ampersand (`&`) operator.
 - **Tools**: `ps`, `kill`, `htop`.
+
+### Automated Service Recovery (Day 16)
+- **Watchdog Implementation**: Developed a custom **Process Watchdog** utility to monitor mission-critical service availability.
+- **Logic**: Utilized `pgrep` and exit-code validation to trigger automated service restoration upon failure detection.
+- **Goal**: Reduced **Mean Time To Recovery (MTTR)** by implementing primitive self-healing infrastructure.
+- **Tools**: `pgrep`, `pkill`, Bash conditional logic.
