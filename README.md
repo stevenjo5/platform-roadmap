@@ -71,3 +71,12 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Logic**: Utilized `pgrep` and exit-code validation to trigger automated service restoration upon failure detection.
 - **Goal**: Reduced **Mean Time To Recovery (MTTR)** by implementing primitive self-healing infrastructure.
 - **Tools**: `pgrep`, `pkill`, Bash conditional logic.
+
+## Automated Service Reliability (Day 17)
+- **Infrastructure Orchestration**: Scheduled the `watchdog.sh` utility via system `crontab` for 60-second interval polling.
+- **Incident Resolution**: 
+    - **Issue**: Script failed execution due to `unexpected end of file`.
+    - **Diagnosis**: Analyzed `watchdog.log` to identify a syntax error in the conditional logic.
+    - **Remediation**: Corrected the Bash `if/fi` block, restoring automated service recovery.
+- **Validation**: Confirmed successful process resurrection via `pgrep` after manual `pkill` termination.
+
