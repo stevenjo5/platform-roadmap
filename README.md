@@ -80,3 +80,18 @@ This incident demonstrated the limitations of default virtualised network stacks
     - **Remediation**: Corrected the Bash `if/fi` block, restoring automated service recovery.
 - **Validation**: Confirmed successful process resurrection via `pgrep` after manual `pkill` termination.
 
+## Observability & Resource Monitoring
+
+### Automated Health Audits (Day 18)
+- **Metric Extraction**: Utilized `awk` and `grep` to parse raw system data into actionable numerical metrics.
+- **Resource Monitoring**: Developed `health_check.sh` to monitor RAM consumption against defined performance thresholds.
+- **Goal**: Transitioning from "Process Uptime" to "Performance Observability" to ensure platform stability.
+- **Tools**: `free`, `awk`, `cut`.
+
+## Platform Maintenance & Storage Optimization
+
+### Automated Log Rotation (Day 19)
+- **Log Management**: Implemented `logrotate` policies to prevent disk exhaustion from high-frequency telemetry.
+- **Data Compression**: Configured `gzip` compression for archived logs, reducing storage footprint by ~90%.
+- **Retention Policy**: Established a 3-cycle rotation policy to ensure only relevant audit data is retained.
+- **Tools**: `logrotate`, `gzip`, `copytruncate`.
