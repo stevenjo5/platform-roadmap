@@ -95,3 +95,10 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Data Compression**: Configured `gzip` compression for archived logs, reducing storage footprint by ~90%.
 - **Retention Policy**: Established a 3-cycle rotation policy to ensure only relevant audit data is retained.
 - **Tools**: `logrotate`, `gzip`, `copytruncate`.
+
+## Developer Experience (DevEx) & Tooling
+
+### Platform Dashboard (Day 20)
+- **Data Aggregation**: Developed a unified dashboard to provide real-time visibility into process health, memory consumption, and disk utilization.
+- **Visual Feedback**: Implemented Bash color coding (`ANSI escape codes`) to highlight system failures vs. healthy states.
+- **Contextual Auditing**: Integrated live log-tailing into the dashboard for immediate troubleshooting.
