@@ -102,3 +102,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Data Aggregation**: Developed a unified dashboard to provide real-time visibility into process health, memory consumption, and disk utilization.
 - **Visual Feedback**: Implemented Bash color coding (`ANSI escape codes`) to highlight system failures vs. healthy states.
 - **Contextual Auditing**: Integrated live log-tailing into the dashboard for immediate troubleshooting.
+
+## Developer Experience & Interface Design
+
+### Command Aliasing & Path Abstraction (Day 21)
+- **Tooling Accessibility**: Implemented permanent Bash aliases within `.bashrc` to provide global access to custom platform utilities.
+- **Cognitive Load Reduction**: Abstracted complex script paths into single-word commands (`status`, `watch`), standardizing the developer's CLI experience.
+- **Persistence Engineering**: Utilized shell profile sourcing to ensure environmental consistency across terminal sessions.
+- **Tools**: `.bashrc`, `alias`, `source`.
