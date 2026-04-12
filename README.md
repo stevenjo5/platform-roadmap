@@ -110,3 +110,15 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Cognitive Load Reduction**: Abstracted complex script paths into single-word commands (`status`, `watch`), standardizing the developer's CLI experience.
 - **Persistence Engineering**: Utilized shell profile sourcing to ensure environmental consistency across terminal sessions.
 - **Tools**: `.bashrc`, `alias`, `source`.
+
+## Infrastructure as Code (IaC)
+
+### Provisioning Challenges & Logic (Day 22)
+- **Objective**: Initialise the Terraform ecosystem for declarative infrastructure management.
+- **Incident Response**: Encountered **HTTP 429 (Too Many Requests)** rate-limiting during the provider repository integration phase.
+- **Engineering Troubleshooting**:
+    - **GPG Key Management**: Attempted manual injection of GPG keys into `/usr/share/keyrings` to resolve repository trust issues.
+    - **Network Resilience**: Pivoted between `wget` and `curl` to bypass CDN-level blocking and rate limits.
+    - **Architecture Fallback**: Evaluated a manual binary installation via the HashiCorp Releases server to circumvent package manager (`apt`) dependencies.
+- **Outcome**: Environment provisioning deferred to Day 23 to allow for IP cooling/TTL expiry, prioritising system stability over forced configuration.
+- **Tools**: `Terraform`, `GPG`, `curl`, `wget`.
