@@ -122,3 +122,16 @@ This incident demonstrated the limitations of default virtualised network stacks
     - **Architecture Fallback**: Evaluated a manual binary installation via the HashiCorp Releases server to circumvent package manager (`apt`) dependencies.
 - **Outcome**: Environment provisioning deferred to Day 23 to allow for IP cooling/TTL expiry, prioritising system stability over forced configuration.
 - **Tools**: `Terraform`, `GPG`, `curl`, `wget`.
+
+
+### The Terraform Lifecycle & Troubleshooting (Day 23)
+- **Objective**: Initialise and execute the first managed resource using HashiCorp Terraform.
+- **Incident Resolution (429 Rate Limiting)**: 
+    - Encountered persistent **HTTP 429** errors when attempting to reach HashiCorp repositories via CLI.
+    - **Platform Solution**: Pivoted to a manual binary injection strategy. Downloaded the Linux binary via a Windows host bridge and moved it into the Linux System Path (`/usr/local/bin`).
+- **Workflow Execution**: 
+    - **Init**: Successfully initialised the "Local Provider" backend.
+    - **Plan**: Validated the execution blueprint for a `local_file` resource.
+    - **Apply**: Provisioned the resource and verified state persistence.
+- **Repository Hygiene**: Hardened the master `.gitignore` to prevent leaking `terraform.tfstate` (infrastructure "secrets") and environment-specific drivers.
+- **Tools**: `Terraform v1.7.5`, `HCL`, `Git`, `Linux Binary Management`.

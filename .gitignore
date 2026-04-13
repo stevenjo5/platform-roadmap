@@ -34,4 +34,5 @@ aws/
 *.state
 
 # Logs
-*.log*
+*.log*terraform-lab/welcome.txt
+terraform-lab/.gitignore
