@@ -36,3 +36,5 @@ aws/
 # Logs
 *.log*terraform-lab/welcome.txt
 terraform-lab/.gitignore
+terraform-lab/welcome.txt
+watchdog.log*
