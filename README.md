@@ -135,3 +135,11 @@ This incident demonstrated the limitations of default virtualised network stacks
     - **Apply**: Provisioned the resource and verified state persistence.
 - **Repository Hygiene**: Hardened the master `.gitignore` to prevent leaking `terraform.tfstate` (infrastructure "secrets") and environment-specific drivers.
 - **Tools**: `Terraform v1.7.5`, `HCL`, `Git`, `Linux Binary Management`.
+
+## Infrastructure as Code (IaC)
+
+### Dynamic Provisioning & Variables (Day 24)
+- **Abstraction**: Decoupled hard-coded values from infrastructure logic using `variables.tf`.
+- **Parameterisation**: Implemented input variables to allow for "Self-Service" configurations.
+- **Dynamic Overrides**: Demonstrated the ability to inject runtime variables via CLI flags (`-var`).
+- **Tools**: `Terraform`, `HCL Variables`.

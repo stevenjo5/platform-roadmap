@@ -38,3 +38,5 @@ aws/
 terraform-lab/.gitignore
 terraform-lab/welcome.txt
 watchdog.log*
+# Terraform variable files
+*.tfvars
