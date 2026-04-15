@@ -146,9 +146,9 @@ This incident demonstrated the limitations of default virtualised network stacks
 
 ## Infrastructure as Code (IaC)
 
-### Resource Metadata & Outputs (Day 25)
-- **Data Exposure**: Implemented `outputs.tf` to programmatically extract resource attributes from the state file.
-- **Auditability**: Configured outputs to display resource "fingerprints" (SHA1 checksums), essential for security verification and infrastructure auditing.
-- **Workflow Integration**: Utilized `terraform output` to retrieve structured data (file paths and IDs) for potential use in downstream automation.
-- **Professional Standard**: Adopted the industry "best practice" of separating output definitions from main logic files to improve code maintainability.
-- **Tools**: `Terraform`, `HCL Outputs`.
+### Custom Workflow Automation (Day 25)
+- **Provisioning Hooks**: Implemented the `local-exec` provisioner to execute automated shell commands immediately following resource creation.
+- **Log Standardisation**: Developed a plain-text auditing system (`deploy.log`) to track deployment success without relying on non-standard characters (emojis), ensuring cross-platform log compatibility.
+- **Dynamic Metadata**: Utilized the `${self.id}` attribute to inject real-time resource identifiers into external audit logs.
+- **Repository Hygiene**: Hardened the master `.gitignore` to exclude local execution logs, maintaining a clean, production-ready codebase.
+- **Tools**: `Terraform`, `local-exec`, `Bash`, `Git`.
