@@ -143,3 +143,12 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Parameterisation**: Implemented input variables to allow for "Self-Service" configurations.
 - **Dynamic Overrides**: Demonstrated the ability to inject runtime variables via CLI flags (`-var`).
 - **Tools**: `Terraform`, `HCL Variables`.
+
+## Infrastructure as Code (IaC)
+
+### Resource Metadata & Outputs (Day 25)
+- **Data Exposure**: Implemented `outputs.tf` to programmatically extract resource attributes from the state file.
+- **Auditability**: Configured outputs to display resource "fingerprints" (SHA1 checksums), essential for security verification and infrastructure auditing.
+- **Workflow Integration**: Utilized `terraform output` to retrieve structured data (file paths and IDs) for potential use in downstream automation.
+- **Professional Standard**: Adopted the industry "best practice" of separating output definitions from main logic files to improve code maintainability.
+- **Tools**: `Terraform`, `HCL Outputs`.

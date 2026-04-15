@@ -40,3 +40,4 @@ terraform-lab/welcome.txt
 watchdog.log*
 # Terraform variable files
 *.tfvars
+terraform-lab/deploy.log
