@@ -152,3 +152,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Dynamic Metadata**: Utilized the `${self.id}` attribute to inject real-time resource identifiers into external audit logs.
 - **Repository Hygiene**: Hardened the master `.gitignore` to exclude local execution logs, maintaining a clean, production-ready codebase.
 - **Tools**: `Terraform`, `local-exec`, `Bash`, `Git`.
+
+## Infrastructure as Code (IaC)
+
+### Lifecycle Management & Safety Locks (Day 26)
+- **Accidental Deletion Prevention**: Implemented `prevent_destroy` lifecycle rules to protect critical resources from unauthorised termination.
+- **Risk Mitigation**: Verified the "Locked" state by confirming that `terraform destroy` commands are rejected by the engine.
+- **Production Standards**: Adopted "Safety First" infrastructure patterns used to protect production databases and networking in UK engineering teams.
+- **Tools**: `Terraform Lifecycle`, `prevent_destroy`.

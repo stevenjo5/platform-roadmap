@@ -7,6 +7,12 @@ resource "local_file" "platform_welcome" {
   provisioner "local-exec" {
     command = "echo 'DEPLOYMENT SUCCESS: Resource ${self.id} created at $(date)' >> deploy.log"
   }
+
+  # Day 26: The Safety Lock
+  lifecycle {
+    prevent_destroy = true
+  }
 }
+
 
 
