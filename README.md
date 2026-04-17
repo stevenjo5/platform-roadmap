@@ -160,3 +160,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Risk Mitigation**: Verified the "Locked" state by confirming that `terraform destroy` commands are rejected by the engine.
 - **Production Standards**: Adopted "Safety First" infrastructure patterns used to protect production databases and networking in UK engineering teams.
 - **Tools**: `Terraform Lifecycle`, `prevent_destroy`.
+
+## Infrastructure as Code (IaC)
+
+### External Data Integration (Day 27)
+- **Data Sources**: Implemented `data` blocks to enable read-only access to existing system files.
+- **Audit Verification**: Utilized the `local_file` data source to fetch and expose contents of the `deploy.log` for programmatic auditing.
+- **HCL Logic**: Demonstrated the distinction between "Managed Resources" (Write) and "Data Sources" (Read).
+- **Tools**: `Terraform Data Sources`, `HCL`.

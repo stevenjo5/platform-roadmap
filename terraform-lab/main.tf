@@ -13,6 +13,11 @@ resource "local_file" "platform_welcome" {
     prevent_destroy = true
   }
 }
+# Day 27: Data Source to read the existing log file
+data "local_file" "existing_log" {
+  filename = "${path.module}/deploy.log"
+}
+
 
 
 
