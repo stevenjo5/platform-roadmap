@@ -168,3 +168,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Audit Verification**: Utilized the `local_file` data source to fetch and expose contents of the `deploy.log` for programmatic auditing.
 - **HCL Logic**: Demonstrated the distinction between "Managed Resources" (Write) and "Data Sources" (Read).
 - **Tools**: `Terraform Data Sources`, `HCL`.
+
+## Infrastructure as Code (IaC)
+
+### Scaling & Iteration (Day 28)
+- **Fleet Orchestration**: Implemented the `count` meta-argument to provision multiple resources from a single declarative block.
+- **Dynamic Naming**: Utilized `count.index` for resource uniqueness, ensuring no naming collisions within the fleet.
+- **Horizontal Scaling**: Demonstrated the ability to scale infrastructure up or down by adjusting a single numerical parameter.
+- **Tools**: `Terraform`, `count`, `String Interpolation`.

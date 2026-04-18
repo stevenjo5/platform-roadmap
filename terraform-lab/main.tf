@@ -18,6 +18,12 @@ data "local_file" "existing_log" {
   filename = "${path.module}/deploy.log"
 }
 
+# Day 28: Scaling with Count
+resource "local_file" "server_fleet" {
+  count    = 3
+  filename = "${path.module}/server-${count.index}.conf"
+  content  = "Platform Server Instance: ${count.index}"
+}
 
 
 
