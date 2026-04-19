@@ -25,5 +25,11 @@ resource "local_file" "server_fleet" {
   content  = "Platform Server Instance: ${count.index}"
 }
 
+# Day 29: Named Scaling with for_each
+resource "local_file" "department_files" {
+  for_each = toset(["marketing", "finance", "engineering"])
 
+  filename = "${path.module}/dept-${each.key}.txt"
+  content  = "Welcome to the ${each.value} department platform."
+}
 

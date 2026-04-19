@@ -176,3 +176,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Dynamic Naming**: Utilized `count.index` for resource uniqueness, ensuring no naming collisions within the fleet.
 - **Horizontal Scaling**: Demonstrated the ability to scale infrastructure up or down by adjusting a single numerical parameter.
 - **Tools**: `Terraform`, `count`, `String Interpolation`.
+
+## Infrastructure as Code (IaC)
+
+### Advanced Resource Iteration (Day 29)
+- **Named Provisioning**: Implemented `for_each` to deploy a fleet of resources with distinct, non-numeric identifiers.
+- **Set Manipulation**: Utilized `toset()` to transform collection data into iteratable resource keys.
+- **Contextual Deployment**: Dynamically injected department-specific metadata into resource attributes using `each.key` and `each.value`.
+- **Tools**: `Terraform`, `for_each`, `HCL Collections`.
