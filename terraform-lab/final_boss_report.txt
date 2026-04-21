@@ -1,1 +1,0 @@
-This infrastructure was provisioned via a dynamic variable!
