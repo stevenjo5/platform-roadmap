@@ -184,3 +184,19 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Set Manipulation**: Utilized `toset()` to transform collection data into iteratable resource keys.
 - **Contextual Deployment**: Dynamically injected department-specific metadata into resource attributes using `each.key` and `each.value`.
 - **Tools**: `Terraform`, `for_each`, `HCL Collections`.
+
+## Platform Architecture & Modularisation
+
+### The Final Boss: Terraform Modules (Day 30)
+- **Modular Abstraction**: Successfully refactored flat HCL code into a reusable "Module" structure, enabling multi-environment scalability.
+- **Encapsulation**: Isolated infrastructure logic from user inputs, providing a "Self-Service" interface for other developers.
+- **Full-Stack IaC Mastery**: Completed the 30-day journey from basic Bash scripting to advanced, modular Infrastructure as Code.
+- **Tools**: `Terraform Modules`, `HCL Architecture`, `Dry (Don't Repeat Yourself) Principles`.
+
+## Month 2: Integration & System Design
+
+### Transition to GitOps Architecture (Day 31)
+- **Repository Refactoring**: Migrated flat IaC files into a standard `/modules` and `/environments` hierarchy.
+- **Architectural Abstraction**: Decoupled core infrastructure logic from environment-specific configurations.
+- **Scalability Foundations**: Established a directory structure capable of supporting Dev, Staging, and Prod environments from a single source of truth.
+- **Tools**: `Terraform Architecture`, `GitOps Design`, `Directory Hierarchy`.
