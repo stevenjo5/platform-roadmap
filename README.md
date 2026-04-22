@@ -200,3 +200,12 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Architectural Abstraction**: Decoupled core infrastructure logic from environment-specific configurations.
 - **Scalability Foundations**: Established a directory structure capable of supporting Dev, Staging, and Prod environments from a single source of truth.
 - **Tools**: `Terraform Architecture`, `GitOps Design`, `Directory Hierarchy`.
+
+## Month 2: Containerisation & Integration
+
+### Docker Infrastructure Hardening (Day 32)
+- **Runtime Troubleshooting**: Diagnosed and mitigated "PID from pipe: EOF" and "NAT table" errors caused by kernel-level incompatibilities on Ubuntu 24.04 (Noble).
+- **Network Stack Debugging**: Switched system network translation to `iptables-legacy` to resolve Docker bridge creation failures.
+- **Advanced Daemon Configuration**: Explored the use of `--exec-opt`, `--iptables=false`, and `--storage-driver=overlay2` to bypass WSL2-specific infrastructure constraints.
+- **SRE Recovery Patterns**: Implemented "Lazy Unmounting" and "Static Binary Injection" techniques to recover a compromised local development environment.
+- **Tools**: `Docker Daemon`, `iptables`, `WSL2 Kernel`, `Binary Management`.
