@@ -209,3 +209,12 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Advanced Daemon Configuration**: Explored the use of `--exec-opt`, `--iptables=false`, and `--storage-driver=overlay2` to bypass WSL2-specific infrastructure constraints.
 - **SRE Recovery Patterns**: Implemented "Lazy Unmounting" and "Static Binary Injection" techniques to recover a compromised local development environment.
 - **Tools**: `Docker Daemon`, `iptables`, `WSL2 Kernel`, `Binary Management`.
+
+## Month 2: Containerisation & Integration
+
+### Cross-Platform Binary Staging (Day 33)
+- **Filesystem Bridging**: Successfully implemented a manual transfer of the 67MB Docker binary via the `/mnt/c/` Windows-to-WSL bridge, bypassing terminal truncation issues.
+- **Dependency Isolation**: Moved from package-manager dependency (apt) to a standalone Binary-based architecture to resolve Ubuntu 24.04 'Noble' kernel mismatches.
+- **Checksum & Verification**: Verified local binary integrity (67MB vs 340KB) to ensure the system is ready for the final manual engine injection.
+- **Platform Readiness**: Finalized the environment state by clearing persistent `/var/lib/docker` mount locks, leaving the 'Platform Identity' image as the next milestone.
+- **Tools**: `WSL Mount Points`, `Binary Staging`, `Manual Extraction`.
