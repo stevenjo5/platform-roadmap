@@ -226,3 +226,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Identity Handshake**: Performed `sts get-caller-identity` verification to ensure the local terminal is securely mapped to the Cloud provider.
 - **Architectural Shift**: Successfully transitioned from local container troubleshooting to a functional Cloud-Native management stack.
 - **Tools**: `AWS CLI`, `STS (Security Token Service)`, `Identity Verification`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### IAM Policy Engineering (Day 35)
+- **Identity Auditing**: Performed a programmatic security audit of the `Steven-dev` IAM principal using the AWS CLI.
+- **Access Analysis**: Verified attached managed policies to determine the operational "blast radius" and adherence to Least Privilege principles.
+- **Account Metadata**: Utilized `get-account-summary` to audit global security quotas and account-level security configurations.
+- **Tools**: `AWS IAM`, `AWS CLI`, `Security Token Service (STS)`.
