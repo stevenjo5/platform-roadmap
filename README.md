@@ -234,3 +234,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Access Analysis**: Verified attached managed policies to determine the operational "blast radius" and adherence to Least Privilege principles.
 - **Account Metadata**: Utilized `get-account-summary` to audit global security quotas and account-level security configurations.
 - **Tools**: `AWS IAM`, `AWS CLI`, `Security Token Service (STS)`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Cloud Networking Architecture (Day 36)
+- **VPC Orchestration**: Programmatically provisioned a Virtual Private Cloud (VPC) with a 10.0.0.0/16 CIDR block for environment isolation.
+- **Network Segmentation**: Implemented subnetting strategies by carving out a /24 public tier to support front-facing resources.
+- **Infrastructure Tagging**: Applied standard metadata tagging (`Platform-VPC`) to ensure resource observability and lifecycle management.
+- **Tools**: `AWS VPC`, `AWS CLI`, `Networking fundamentals`.
