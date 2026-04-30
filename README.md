@@ -242,3 +242,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Network Segmentation**: Implemented subnetting strategies by carving out a /24 public tier to support front-facing resources.
 - **Infrastructure Tagging**: Applied standard metadata tagging (`Platform-VPC`) to ensure resource observability and lifecycle management.
 - **Tools**: `AWS VPC`, `AWS CLI`, `Networking fundamentals`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Cloud Networking Architecture (Day 36)
+- **VPC Orchestration**: Programmatically provisioned a Virtual Private Cloud (VPC) with a 10.0.0.0/16 CIDR block for environment isolation.
+- **Network Segmentation**: Implemented subnetting strategies by carving out a /24 public tier to support front-facing resources.
+- **Infrastructure Tagging**: Applied standard metadata tagging (`Platform-VPC`) to ensure resource observability and lifecycle management.
+- **Tools**: `AWS VPC`, `AWS CLI`, `Networking fundamentals`.
