@@ -250,3 +250,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Network Segmentation**: Implemented subnetting strategies by carving out a /24 public tier to support front-facing resources.
 - **Infrastructure Tagging**: Applied standard metadata tagging (`Platform-VPC`) to ensure resource observability and lifecycle management.
 - **Tools**: `AWS VPC`, `AWS CLI`, `Networking fundamentals`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Edge Connectivity & Routing (Day 37)
+- **Internet Gateway Orchestration**: Provisioned and attached a virtual edge router (IGW) to the Platform-VPC for external egress.
+- **Route Table Engineering**: Configured a default route (0.0.0.0/0) to enable bidirectional internet traffic for the public subnet.
+- **Network Path Verification**: Validated routing logic via CLI to ensure highly available paths to the global web.
+- **Tools**: `AWS IGW`, `Route Tables`, `CIDR Routing`, `AWS CLI`.
