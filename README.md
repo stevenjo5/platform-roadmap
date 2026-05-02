@@ -258,3 +258,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Route Table Engineering**: Configured a default route (0.0.0.0/0) to enable bidirectional internet traffic for the public subnet.
 - **Network Path Verification**: Validated routing logic via CLI to ensure highly available paths to the global web.
 - **Tools**: `AWS IGW`, `Route Tables`, `CIDR Routing`, `AWS CLI`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Security Group Engineering & Firewalls (Day 38)
+- **Security Group Orchestration**: Provisioned the `Platform-Web-SG` as a stateful firewall for instance-level protection.
+- **Ingress Rule Implementation**: Configured Least Privilege access by restricting SSH (Port 22) traffic to a single source IP (/32).
+- **Protocol Management**: Established baseline TCP rules for future application tier communication.
+- **Tools**: `AWS Security Groups`, `Ingress/Egress Logic`, `IP CIDR Masking`.
