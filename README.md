@@ -266,3 +266,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Ingress Rule Implementation**: Configured Least Privilege access by restricting SSH (Port 22) traffic to a single source IP (/32).
 - **Protocol Management**: Established baseline TCP rules for future application tier communication.
 - **Tools**: `AWS Security Groups`, `Ingress/Egress Logic`, `IP CIDR Masking`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Compute Orchestration & Provisioning (Day 39)
+- **Identity & Access**: Generated an RSA-based Key Pair (Platform-Key) for secure programmatic access to the compute fleet.
+- **Instance Lifecycle**: Orchestrated the launch of an Amazon Linux 2023 instance within a custom VPC.
+- **Network Integration**: Explicitly associated a dynamic Public IP and mapped the instance to the Platform-Web-SG firewall.
+- **Tools**: `AWS EC2`, `AMI`, `SSH Key Pairs`, `AWS CLI`.
