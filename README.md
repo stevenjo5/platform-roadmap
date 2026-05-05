@@ -274,3 +274,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Instance Lifecycle**: Orchestrated the launch of an Amazon Linux 2023 instance within a custom VPC.
 - **Network Integration**: Explicitly associated a dynamic Public IP and mapped the instance to the Platform-Web-SG firewall.
 - **Tools**: `AWS EC2`, `AMI`, `SSH Key Pairs`, `AWS CLI`.
+
+## Month 2: Cloud-Native Infrastructure
+
+### Secure Access & Troubleshooting (Day 40)
+- **Infrastructure Verification**: Confirmed end-to-end VPC networking and instance stability in the London region.
+- **Access Strategy Pivot**: Diagnosed local WSL/SSH handshake limitations and successfully pivoted to **AWS Instance Connect** for secure shell access.
+- **System Administration**: Executed remote system diagnostics (`uptime`, `uname`) within the Amazon Linux environment.
+- **Tools**: `EC2 Instance Connect`, `AWS CLI`, `Bash`
