@@ -34,12 +34,7 @@ aws/
 *.state
 
 # Logs
-*.log*terraform-lab/welcome.txt
+*.log
+*terraform-lab/welcome.txt
 terraform-lab/.gitignore
-terraform-lab/welcome.txt
-watchdog.log*
-# Terraform variable files
-*.tfvars
-terraform-lab/deploy.log
-terraform-lab/production_log.txt
-.local/
+
