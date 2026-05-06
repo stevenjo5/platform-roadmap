@@ -281,4 +281,13 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Infrastructure Verification**: Confirmed end-to-end VPC networking and instance stability in the London region.
 - **Access Strategy Pivot**: Diagnosed local WSL/SSH handshake limitations and successfully pivoted to **AWS Instance Connect** for secure shell access.
 - **System Administration**: Executed remote system diagnostics (`uptime`, `uname`) within the Amazon Linux environment.
-- **Tools**: `EC2 Instance Connect`, `AWS CLI`, `Bash`
+- **Tools**: `EC2 Instance Connect`, `AWS CLI`, `Bash`.
+
+## Month 2: Infrastructure as Code (IaC)
+
+### Strategic Pivot to CloudFormation (Day 41)
+- **Tooling Assessment**: Identified external repository rate-limiting (429 errors) as a critical blocker for Terraform orchestration.
+- **Pivot Execution**: Transitioned to AWS CloudFormation (Native IaC) to ensure zero-dependency environment provisioning.
+- **Template Authoring**: Created the initial `vpc-template.yaml` to define the Platform-VPC via declarative YAML syntax.
+- **Tools**: `AWS CloudFormation`, `YAML`, `Infrastructure as Code`.
+
