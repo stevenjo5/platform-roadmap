@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Platform-VPC Infrastructure'
+Description: 'Platform-VPC Infrastructure - v2'
 Resources:
   PlatformVPC:
     Type: 'AWS::EC2::VPC'
@@ -10,4 +10,26 @@ Resources:
       Tags:
         - Key: Name
           Value: Platform-VPC-Automated
-          
+
+  PublicSubnet01:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref PlatformVPC
+      CidrBlock: 10.0.1.0/24
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: Public-Subnet-Automated
+
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: Platform-IGW-Automated
+
+  GatewayAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref PlatformVPC
+      InternetGatewayId: !Ref InternetGateway
