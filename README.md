@@ -291,3 +291,10 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Template Authoring**: Created the initial `vpc-template.yaml` to define the Platform-VPC via declarative YAML syntax.
 - **Tools**: `AWS CloudFormation`, `YAML`, `Infrastructure as Code`.
 
+## Month 2: Infrastructure as Code (IaC)
+
+### Stack Evolution & Resource Mapping (Day 42)
+- **Declarative Updates**: Utilized `update-stack` to evolve the existing VPC infrastructure without downtime or manual intervention.
+- **Resource Dependency**: Implemented `!Ref` intrinsic functions to programmatically link the Subnet and Internet Gateway to the parent VPC.
+- **Network Automation**: Configured `MapPublicIpOnLaunch` within the YAML blueprint to automate IP assignment for the public tier.
+- **Tools**: `AWS CloudFormation`, `YAML Intrinsic Functions`, `State Management`.
