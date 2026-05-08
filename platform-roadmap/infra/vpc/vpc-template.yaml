@@ -1,6 +1,39 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'Platform-VPC Infrastructure - v2'
 Resources:
+     PublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref PlatformVPC
+      Tags:
+        - Key: Name
+          Value: Platform-Public-RT
+
+  DefaultPublicRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: GatewayAttachment
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  SubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PublicSubnet01
+      RouteTableId: !Ref PublicRouteTable
+
+  WebSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Allow SSH and HTTP
+      VpcId: !Ref PlatformVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
   PlatformVPC:
     Type: 'AWS::EC2::VPC'
     Properties:

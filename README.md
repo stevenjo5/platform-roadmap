@@ -298,3 +298,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Resource Dependency**: Implemented `!Ref` intrinsic functions to programmatically link the Subnet and Internet Gateway to the parent VPC.
 - **Network Automation**: Configured `MapPublicIpOnLaunch` within the YAML blueprint to automate IP assignment for the public tier.
 - **Tools**: `AWS CloudFormation`, `YAML Intrinsic Functions`, `State Management`.
+
+## Month 2: Infrastructure as Code (IaC)
+
+### Network Perimeter & Routing Logic (Day 43)
+- **Routing Orchestration**: Defined a `PublicRouteTable` and established a default route (0.0.0.0/0) via the `InternetGateway` for external connectivity.
+- **Subnet Association**: Automated the mapping of `PublicSubnet01` to the routing tier to finalize the public subnet's architecture.
+- **Stateful Security**: Provisioned the `WebSecurityGroup` as a declarative firewall, defining baseline ingress rules for management access.
+- **Tools**: `AWS CloudFormation`, `Route Tables`, `Security Groups`, `YAML`.
