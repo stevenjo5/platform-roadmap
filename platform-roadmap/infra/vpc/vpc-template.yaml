@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Platform-VPC Infrastructure - v3'
+Description: 'Platform-VPC Infrastructure - v4'
 Resources:
   PlatformVPC:
     Type: 'AWS::EC2::VPC'
@@ -66,3 +66,19 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
+
+  PlatformServer01:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t3.micro
+      ImageId: ami-0e8d228ad90af673b
+      KeyName: Platform-Key-V2
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          GroupSet:
+            - !Ref WebSecurityGroup
+          SubnetId: !Ref PublicSubnet01
+      Tags:
+        - Key: Name
+          Value: Platform-Server-Automated
