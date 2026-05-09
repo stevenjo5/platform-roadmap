@@ -306,3 +306,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Subnet Association**: Automated the mapping of `PublicSubnet01` to the routing tier to finalize the public subnet's architecture.
 - **Stateful Security**: Provisioned the `WebSecurityGroup` as a declarative firewall, defining baseline ingress rules for management access.
 - **Tools**: `AWS CloudFormation`, `Route Tables`, `Security Groups`, `YAML`.
+
+## Month 2: Infrastructure as Code (IaC)
+
+### Full-Stack Orchestration (Day 44)
+- **Compute Provisioning**: Integrated an `AWS::EC2::Instance` resource into the existing networking blueprint to achieve full-stack automation.
+- **Dynamic Resource Mapping**: Utilized `!Ref` intrinsic functions to automatically associate the server with the `WebSecurityGroup` and `PublicSubnet01`.
+- **Infrastructure Lifecycle**: Executed a declarative stack update to transition from "Network-Only" to a "Network + Compute" state.
+- **Tools**: `AWS CloudFormation`, `EC2`, `Infrastructure as Code`.

@@ -9,6 +9,23 @@ Resources:
         - Key: Name
           Value: Platform-Public-RT
 
+          PlatformServer01:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t3.micro
+      ImageId: ami-0e8d228ad90af673b # Amazon Linux 2023 (London)
+      KeyName: Platform-Key-V2
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          GroupSet:
+            - !Ref WebSecurityGroup
+          SubnetId: !Ref PublicSubnet01
+      Tags:
+        - Key: Name
+          Value: Platform-Server-Automated
+
+
   DefaultPublicRoute:
     Type: 'AWS::EC2::Route'
     DependsOn: GatewayAttachment
