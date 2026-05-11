@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Platform-VPC Infrastructure - v2'
+Description: 'Platform-VPC Infrastructure - v4'
 Resources:
      PublicRouteTable:
     Type: 'AWS::EC2::RouteTable'
