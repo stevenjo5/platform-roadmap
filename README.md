@@ -314,3 +314,11 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **Dynamic Resource Mapping**: Utilized `!Ref` intrinsic functions to automatically associate the server with the `WebSecurityGroup` and `PublicSubnet01`.
 - **Infrastructure Lifecycle**: Executed a declarative stack update to transition from "Network-Only" to a "Network + Compute" state.
 - **Tools**: `AWS CloudFormation`, `EC2`, `Infrastructure as Code`.
+
+## Month 2: Infrastructure as Code (IaC)
+
+### Full-Stack Lifecycle Management (Day 45)
+- **Lifecycle Decommissioning**: Orchestrated a full-stack deletion via `delete-stack`, ensuring zero-cost compliance for the production environment.
+- **State Validation**: Verified the removal of all logical resources (VPC, Subnet, EC2, IGW) through CLI status polling.
+- **Phase 1 Completion**: Successfully transitioned from manual orchestration to declarative, version-controlled automation.
+- **Tools**: `AWS CloudFormation`, `Stack Lifecycle Management`.
