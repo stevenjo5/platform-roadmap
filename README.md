@@ -322,3 +322,17 @@ This incident demonstrated the limitations of default virtualised network stacks
 - **State Validation**: Verified the removal of all logical resources (VPC, Subnet, EC2, IGW) through CLI status polling.
 - **Phase 1 Completion**: Successfully transitioned from manual orchestration to declarative, version-controlled automation.
 - **Tools**: `AWS CloudFormation`, `Stack Lifecycle Management`.
+
+## Month 2: Infrastructure as Code (IaC) - The Terraform Era
+
+### Strategic Pivot: Manual Binary Orchestration (Day 46)
+- **Problem**: Encountered persistent environment bottlenecks (WSL pathing & CloudShell rate-limiting) preventing standard yum and curl installations of HashiCorp Terraform.
+- **Adaptability Pivot**: Abandoned automated package managers in favor of **Manual Artifact Injection**.
+- **Execution**: 
+    1. Manually sourced the verified amd64 Linux binary.
+    2. Performed a local file injection via AWS CloudShell "Upload" orchestration.
+    3. Manually provisioned the binary into the ~/.local/bin path.
+    4. Reconfigured the shell $PATH to establish a persistent execution environment.
+- **Outcome**: Successfully bypassed all environment-level blockers, achieving a verified Terraform v1.9.8 installation.
+- **IaC Initialisation**: Created the foundational main.tf and executed terraform init, successfully pulling the AWS Provider (v5.100.0).
+- **Tools**: Terraform, Bash Shell Scripting, Artifact Management, Binary Pathing.
