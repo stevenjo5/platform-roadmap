@@ -11,15 +11,26 @@ provider "aws" {
   region = var.aws_region
 }
 
-# 1. Parent VPC Container
+# Declarative Local Constants Matrix
+locals {
+  project_slug = "platform-core"
+  env_suffix   = terraform.workspace
+  common_tags = {
+    Project     = local.project_slug
+    Environment = local.env_suffix
+    ManagedBy   = "terraform"
+  }
+}
+
+# 1. Parent VPC Container referencing unified Local Tags
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags = {
-    Name = "Terraform-VPC"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-vpc-${local.env_suffix}"
+  })
 }
 
 # 2. Public Subnet Tier
@@ -28,18 +39,18 @@ resource "aws_subnet" "public" {
   cidr_block              = var.public_subnet_cidr
   map_public_ip_on_launch = true
 
-  tags = {
-    Name = "Terraform-Public-Subnet"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-public-subnet-${local.env_suffix}"
+  })
 }
 
 # 3. Internet Edge Gateway
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name = "Terraform-IGW"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-igw-${local.env_suffix}"
+  })
 }
 
 # 4. Routing Table Architecture
@@ -51,9 +62,9 @@ resource "aws_route_table" "public" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  tags = {
-    Name = "Terraform-Public-RT"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-public-rt-${local.env_suffix}"
+  })
 }
 
 # 5. Route Table Subnet Association
@@ -64,7 +75,7 @@ resource "aws_route_table_association" "public" {
 
 # 6. Stateful Perimeter Security Group (Firewall)
 resource "aws_security_group" "web" {
-  name        = "terraform-web-sg"
+  name        = "${local.project_slug}-web-sg-${local.env_suffix}"
   description = "Allow inbound management traffic"
   vpc_id      = aws_vpc.main.id
 
@@ -83,9 +94,9 @@ resource "aws_security_group" "web" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "Terraform-Web-SG"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-web-sg-${local.env_suffix}"
+  })
 }
 
 # 7. Automated Compute Instance (The Server)
@@ -96,9 +107,9 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.web.id]
   key_name               = "Platform-Key-V2"
 
-  tags = {
-    Name = "Terraform-App-Server"
-  }
+  tags = merge(local.common_tags, {
+    Name = "${local.project_slug}-app-server-${local.env_suffix}"
+  })
 }
 
 # Output Metadata Schema Variables
