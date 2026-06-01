@@ -22,3 +22,11 @@
 - **Implicit Graph Resolution**: Forced the execution engine to construct an implicit dependency graph, delaying server provisioning until network components are fully initialized.
 - **Dynamic Variable Ingestion**: Provisioned full-stack modular server architectures without using single hardcoded AWS tracking strings.
 - **Tools**: `Terraform v1.9.8`, `Cross-Module Interpolation`, `Implicit Graphing`.
+
+## Month 3: Containerisation & Core Orchestration
+
+### Local Engine Provisioning & Runtime Initialization (Day 61)
+- **Engine Initialization**: Completed baseline deployment of the native Docker CE architecture inside a local Linux system frame (WSL/Ubuntu).
+- **Security Access Configuration**: Reconfigured user shell privileges to access the container socket interface securely without privilege escalation hooks.
+- **State Validation**: Verified background service execution paths and successfully queried the engine core version configuration registry (v29.5.2).
+- **Tools**: `Docker CE Engine`, `Systemd Service Groups`, `Linux Privilege Mapping`.
