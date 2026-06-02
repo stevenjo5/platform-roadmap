@@ -30,3 +30,9 @@
 - **Security Access Configuration**: Reconfigured user shell privileges to access the container socket interface securely without privilege escalation hooks.
 - **State Validation**: Verified background service execution paths and successfully queried the engine core version configuration registry (v29.5.2).
 - **Tools**: `Docker CE Engine`, `Systemd Service Groups`, `Linux Privilege Mapping`.
+
+### Container Lifecycle Orchestration & Port Mapping (Day 62)
+- **Image Sourcing Operation**: Pulled down a decoupled, lightweight runtime blueprint (`nginx:alpine`) from the public Docker Hub registry.
+- **Detached Process Instantiation**: Executed an isolated container configuration routine (`docker run -d`) to spawn an asynchronous background service node.
+- **Port Boundary Mapping**: Configured explicit network ingress paths (`-p 8080:80`) to bind local socket interfaces directly to container namespaces.
+- **Tools**: `Docker Engine v29.5.2`, `Image Registries`, `Ingress Mapping`.
