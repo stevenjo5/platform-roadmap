@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # The Public Facing UI Layer
+  frontend-ui:
+    image: nginx:alpine
+    container_name: compose-frontend-ui
+    ports:
+      - "9999:80"
+    networks:
+      - stack-mesh
+    depends_on:
+      - backend-api
+
+  # The Private Hidden Backend Core
+  backend-api:
+    image: nginx:alpine
+    container_name: compose-backend-api
+    volumes:
+      - stack-data:/usr/share/nginx/html/logs
+    networks:
+      - stack-mesh
+
+volumes:
+  stack-data:
+    driver: local
+
+networks:
+  stack-mesh:
+    driver: bridge
