@@ -79,3 +79,9 @@
 - **High-Availability Service Scaling**: Provisioned a multi-node cluster service topology enforcing an explicit desired state threshold of 3 running web replicas.
 - **Ingress Load-Balancing Verification**: Confirmed internal cluster mesh load-balancing operations by hitting shared port proxy routes successfully.
 - **Tools**: `Docker Swarm Orchestration`, `Service Scaling`, `Self-Healing Clusters`.
+
+### Zero-Downtime Rolling Upgrades & Cluster Lifecycle Teardown (Day 70)
+- **Sequential Rolling Rollouts**: Orchestrated a live application image upgrade across a running cluster using explicit parallelism constraints (`--update-parallelism 1`).
+- **Orchestration Delays**: Configured stabilization buffers (`--update-delay 5s`) to verify image health patterns during live deployments.
+- **Graceful Decommissioning**: Completed cluster teardown workflows via `docker service rm` and `docker swarm leave` to return the engine to a standalone footprint.
+- **Tools**: `Rolling Rollouts`, `Desired State Matching`, `Cluster Lifecycle Management`.
