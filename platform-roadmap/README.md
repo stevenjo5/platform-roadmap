@@ -92,3 +92,9 @@
 - **Control Plane Instantiation**: Launched an active single-node cluster utilizing the host daemon system as the virtual runtime driver (`--driver=docker`).
 - **Cluster State Validation**: Executed control node discovery audits to verify API responsiveness and secure a verified `Ready` system status.
 - **Tools**: `Minikube v1.38.1`, `Kubectl CLI v1.30.2`, `Kubernetes Control Planes`.
+
+### Declarative Object Management & Pod Manifest Architecture (Day 72)
+- **Object Schema Design**: Authored a structured, industry-standard YAML `Pod` manifest mapping precise API boundaries (`apiVersion: v1`).
+- **Declarative Workspace Injection**: Utilized `kubectl apply -f` to pass localized templates straight to the live cluster control plane.
+- **Metadata Label Orchestration**: Configured custom dictionary arrays (`app: web-tier`) to enforce strict component tracing standards across objects.
+- **Tools**: `Kubernetes API Engine`, `YAML Configuration Blueprints`, `Pod Lifecycle Tracking`.
