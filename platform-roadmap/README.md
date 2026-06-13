@@ -98,3 +98,9 @@
 - **Declarative Workspace Injection**: Utilized `kubectl apply -f` to pass localized templates straight to the live cluster control plane.
 - **Metadata Label Orchestration**: Configured custom dictionary arrays (`app: web-tier`) to enforce strict component tracing standards across objects.
 - **Tools**: `Kubernetes API Engine`, `YAML Configuration Blueprints`, `Pod Lifecycle Tracking`.
+
+### Runtime Logging & Ingress Port-Forwarding (Day 73)
+- **Container Log Extraction**: Leveraged `kubectl logs` to audit internal system initialization diagnostics directly out of isolated container runtimes.
+- **Ingress Proxy Port-Forwarding**: Configured an active network bridge tunnel using `kubectl port-forward` to route local host ports (`8888`) directly to pod layers (`80`).
+- **Proxy Namespace Validation**: Verified cross-boundary routing functionality by executing terminal queries against active local socket lines successfully.
+- **Tools**: `Kubectl Debugging`, `Ingress Network Tunnels`, `Pod Log Aggregation`.
