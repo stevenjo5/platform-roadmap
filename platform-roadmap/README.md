@@ -105,8 +105,15 @@
 - **Proxy Namespace Validation**: Verified cross-boundary routing functionality by executing terminal queries against active local socket lines successfully.
 - **Tools**: `Kubectl Debugging`, `Ingress Network Tunnels`, `Pod Log Aggregation`.
 
+
 ### Self-Healing Cluster Architecture via Deployments (Day 74)
 - **High-Availability Schema Architecture**: Coordinated a native `Deployment` controller template mapping scaling targets (`replicas: 3`).
 - **Selector Label Handshakes**: Implemented strict `matchLabels` selectors to bridge the automated deployment engine securely to underlying pod templates.
 - **Chaos Replication Audit**: Executed targeted pod termination testing to validate real-time self-healing capabilities, verifying immediate replacement generation.
 - **Tools**: `Kubernetes Deployments`, `Replica Sets`, `Self-Healing Automation`, `Chaos Testing`.
+
+### Abstracted Microservice Networking via ClusterIP Services (Day 75)
+- **Service Mesh Abstraction**: Engineered a native `ClusterIP` service manifest to establish a permanent internal load-balancing endpoint.
+- **Dynamic Endpoint Tracking**: Utilized label selectors (`app: resilient-web`) to dynamically map changing target pod IPs without manual reconfiguration.
+- **Endpoint Handshake Validation**: Audited structural routing vectors utilizing `kubectl get endpoints` to verify automated triple-node backend association.
+- **Tools**: `Kubernetes Services`, `ClusterIP Routing`, `Dynamic Service Discovery`, `Endpoint Mapping`.
