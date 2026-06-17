@@ -117,3 +117,9 @@
 - **Dynamic Endpoint Tracking**: Utilized label selectors (`app: resilient-web`) to dynamically map changing target pod IPs without manual reconfiguration.
 - **Endpoint Handshake Validation**: Audited structural routing vectors utilizing `kubectl get endpoints` to verify automated triple-node backend association.
 - **Tools**: `Kubernetes Services`, `ClusterIP Routing`, `Dynamic Service Discovery`, `Endpoint Mapping`.
+
+### External Routing Ingress via NodePort Services (Day 76)
+- **External Gateway Architecture**: Engineered a native `NodePort` service manifest to open dedicated ingress pathways (`nodePort: 32000`).
+- **Cross-Boundary Network Routing**: Mapped host browser sockets directly down to internal cluster container spaces without requiring proxy wrappers.
+- **Ingress Address Mapping**: Utilized Minikube engine route discovery utilities to expose live system addresses natively to host runtime apps.
+- **Tools**: `Kubernetes Services`, `NodePort Ingress`, `External Service Mesh`, `Minikube Network Mapping`.
