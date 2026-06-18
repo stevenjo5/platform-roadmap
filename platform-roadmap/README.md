@@ -123,3 +123,9 @@
 - **Cross-Boundary Network Routing**: Mapped host browser sockets directly down to internal cluster container spaces without requiring proxy wrappers.
 - **Ingress Address Mapping**: Utilized Minikube engine route discovery utilities to expose live system addresses natively to host runtime apps.
 - **Tools**: `Kubernetes Services`, `NodePort Ingress`, `External Service Mesh`, `Minikube Network Mapping`.
+
+### Hard Resource Scheduling Guardrails (Day 77)
+- **Deterministic Resource Allocation**: Implemented strict container `requests` and `limits` blocks to enforce predictable cluster hardware footprints.
+- **Milli-CPU & Binary-Byte Throttling**: Configured precise scaling limits (`cpu: 200m`, `memory: 128Mi`) to insulate host layers against runtime execution memory leaks.
+- **Zero-Downtime Rolling Restarts**: Executed live rolling deployments to transition active workloads to resource-constrained templates with zero traffic interruptions.
+- **Tools**: `Kubernetes Resource Isolation`, `Milli-CPU Governance`, `OOM-Prevention Guards`.
