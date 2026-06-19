@@ -129,3 +129,9 @@
 - **Milli-CPU & Binary-Byte Throttling**: Configured precise scaling limits (`cpu: 200m`, `memory: 128Mi`) to insulate host layers against runtime execution memory leaks.
 - **Zero-Downtime Rolling Restarts**: Executed live rolling deployments to transition active workloads to resource-constrained templates with zero traffic interruptions.
 - **Tools**: `Kubernetes Resource Isolation`, `Milli-CPU Governance`, `OOM-Prevention Guards`.
+
+### Dynamic Application Injection via ConfigMaps (Day 78)
+- **Decoupled Architecture Engineering**: Created a native `ConfigMap` manifest storage component to isolate operational parameters from application binary states.
+- **Dynamic File Overwrite Mounts**: Configured declarative pod `volumes` and `volumeMounts` to injection-stream file payloads directly into live container folder hierarchies.
+- **Microservice State Swapping**: Executed clean configuration mounts to swap underlying static landing assets dynamically without forcing an engine build.
+- **Tools**: `Kubernetes ConfigMaps`, `Volume Storage Abstraction`, `Dynamic Injection Systems`.

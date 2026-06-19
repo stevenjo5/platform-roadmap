@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: platform-web-config
+spec:
+  # The spec field is omitted for ConfigMaps; keys sit natively at data level
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Enterprise Kubernetes Mesh</title>
+      <style>body { font-family: sans-serif; text-align: center; padding-top: 10%; background: #0f172a; color: #f8fafc; }</style>
+    </head>
+    <body>
+      <h1>Production Platform Core Active</h1>
+      <p>Dynamic Environment Configuration Injected Successfully via Kubernetes ConfigMaps.</p>
+    </body>
+    </html>
