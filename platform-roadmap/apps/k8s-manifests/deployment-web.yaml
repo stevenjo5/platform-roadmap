@@ -26,6 +26,12 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "200m"
+          env:
+            - name: PLATFORM_DB_CONNECTION
+              valueFrom:
+                secretKeyRef:
+                  name: platform-db-secret
+                  key: DATABASE_URL
           volumeMounts:
             - name: config-volume
               mountPath: /usr/share/nginx/html/index.html
