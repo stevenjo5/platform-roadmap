@@ -147,3 +147,8 @@
 - **Base64 Cryptographic Scoping**: Formatted sensitive application parameters utilizing Base64 string formatting targets (`type: Opaque`).
 - **Dynamic Secret Injection**: Integrated `secretKeyRef` environmental bindings to stream hidden keys straight into runtime memory layouts safely.
 - **Tools**: `Kubernetes Secrets`, `Base64 Encoding`, `Runtime Environment Injection`, `Container Security Integration`.
+
+### In-Container Secret Memory Inspection & Verification (Day 81)
+- **Runtime Environment Memory Auditing**: Leveraged \`kubectl exec\` memory diagnostics to verify active decryption of sensitive strings.
+- **Cryptographic Variable Validation**: Confirmed dynamic environment mapping via isolated standalone security validation pods.
+- **Tools**: \`Kubectl Diagnostic Engines\`, \`Process Memory Audits\`, \`Container Security Validation\`.
