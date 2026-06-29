@@ -170,3 +170,9 @@
 - **Access Boundary Architecture**: Configured strict `ReadWriteOnce` access restrictions alongside dedicated capacity limits (`storage: 1Gi`).
 - **Cluster Storage Auditing**: Utilized `kubectl get pv` tracking commands to verify independent storage provisioning status boundaries.
 - **Tools**: `Kubernetes PersistentVolumes`, `HostPath Storage Engines`, `Storage Class Isolation`.
+
+### Decoupled Storage Binding via PersistentVolumeClaims (Day 85)
+- **Declarative Storage Leasing**: Implemented a localized `PersistentVolumeClaim` manifest to isolate resource requests within production namespaces.
+- **Dynamic Lifecycle Binding**: Leveraged deterministic volume properties (`storageClassName: manual`) to execute automated binding routines.
+- **Storage Tier Verification**: Audited physical-to-virtual storage mapping layers to verify absolute state transitions from Available to Bound status loops.
+- **Tools**: `Kubernetes PersistentVolumeClaims`, `Volume Binding Control`, `Resource Lease Management`.
