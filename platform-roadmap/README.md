@@ -176,3 +176,9 @@
 - **Dynamic Lifecycle Binding**: Leveraged deterministic volume properties (`storageClassName: manual`) to execute automated binding routines.
 - **Storage Tier Verification**: Audited physical-to-virtual storage mapping layers to verify absolute state transitions from Available to Bound status loops.
 - **Tools**: `Kubernetes PersistentVolumeClaims`, `Volume Binding Control`, `Resource Lease Management`.
+
+### Attaching Persistent Storage Mounts to Live Deployments (Day 86)
+- **Stateful Workload Engineering**: Integrated native `PersistentVolumeClaim` disk attachments directly into multi-replica deployment manifest specs.
+- **FileSystem Volume Mapping**: Configured secure container-level `volumeMounts` to map persistent disk lines directly over system logging directories (`/var/log/nginx`).
+- **Data Persistence Validation**: Triggered structural rolling updates to bind running microservice replicas to non-volatile physical storage layers cleanly.
+- **Tools**: `Kubernetes Deployments`, `Stateful Injections`, `Volume Management`, `Data Persistence`.

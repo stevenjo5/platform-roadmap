@@ -37,7 +37,12 @@ spec:
             - name: config-volume
               mountPath: /usr/share/nginx/html/index.html
               subPath: index.html
+            - name: platform-persistent-storage
+              mountPath: /var/log/nginx
       volumes:
         - name: config-volume
           configMap:
             name: platform-web-config
+        - name: platform-persistent-storage
+          persistentVolumeClaim:
+            claimName: platform-production-pvc
