@@ -201,3 +201,10 @@
 - **Chart Structural Scaffolding**: Utilized `helm create` engine commands to construct structured, template-driven deployment charts (`core-web-app`).
 - **Decoupled Variable Architecture**: Initialized the foundation for dynamic value injections, replacing static manifests with template parameters.
 - **Tools**: `Helm v3 Package Manager`, `Kubernetes Template Architectures`, `Enterprise Scaffolding Runtimes`.
+
+### Dynamic Go-Templating & Blueprint Parameterization (Day 90)
+- **Manifest Boilerplate Purging**: Decommissioned default template parameters to clear the baseline architecture for application structures.
+- **Go-Template Spec Parameterization**: Implemented dual-bracket injection syntax (`{{ .Values }}`) to decouple environment states from cluster specifications.
+- **Centralized Variable Engine Modeling**: Engineered a multi-tiered `values.yaml` configuration controller grid to manage isolated application variables cleanly.
+- **Dry-Run Template Compiling**: Executed `helm template` rendering checks to validate interpolation accuracy against schema parameters.
+- **Tools**: `Helm Engine Templating`, `Go Text Templates`, `Dry-Run Schema Validation`.
