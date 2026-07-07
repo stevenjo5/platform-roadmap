@@ -17,3 +17,8 @@ resources:
   limits:
     memory: "128Mi"
     cpu: "200m"
+
+# Dynamic Networking Service Configurations
+service:
+  type: ClusterIP
+  port: 80

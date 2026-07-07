@@ -208,3 +208,9 @@
 - **Centralized Variable Engine Modeling**: Engineered a multi-tiered `values.yaml` configuration controller grid to manage isolated application variables cleanly.
 - **Dry-Run Template Compiling**: Executed `helm template` rendering checks to validate interpolation accuracy against schema parameters.
 - **Tools**: `Helm Engine Templating`, `Go Text Templates`, `Dry-Run Schema Validation`.
+
+### Multi-Object Chart Expansion & Live Helm Installation (Day 91)
+- **Multi-Object Chart Expansion**: Parameterized a dynamic `ClusterIP` Service manifest to integrate networking layouts directly into the template stream.
+- **Unified Package Rollouts**: Leveraged `helm install` core automation to spin up independent deployments and network load balancers using a single command line.
+- **Dynamic Structural Selector Handshakes**: Engineered cross-object template variables (`app: {{ .Release.Name }}-web`) to enforce automated network discovery.
+- **Tools**: `Helm Package Engineering`, `Multi-Resource Orchestration`, `Automated App Release Chains`.
