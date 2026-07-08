@@ -214,3 +214,9 @@
 - **Unified Package Rollouts**: Leveraged `helm install` core automation to spin up independent deployments and network load balancers using a single command line.
 - **Dynamic Structural Selector Handshakes**: Engineered cross-object template variables (`app: {{ .Release.Name }}-web`) to enforce automated network discovery.
 - **Tools**: `Helm Package Engineering`, `Multi-Resource Orchestration`, `Automated App Release Chains`.
+
+### Zero-Downtime Rollouts, Package Upgrades, & Automated Rollbacks (Day 92)
+- **Declarative Package Upgrades**: Controlled zero-downtime container updates utilizing `helm upgrade` to alter active parameters dynamically.
+- **Immutable Revision History Tracking**: Audited the internal cluster ledger state machine via `helm history` tracking commands to monitor platform revisions.
+- **Automated Infrastructure Rollbacks**: Executed authoritative `helm rollback` commands to reverse failed update blocks back to baseline snapshots.
+- **Tools**: `Helm Upgrade Machinery`, `Revision History Engines`, `SRE Rollback Operations`.

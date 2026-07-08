@@ -1,6 +1,5 @@
-# Centralized Variable Configuration Engine Dashboard
-
-replicaCount: 3
+# Centralized Variable Configuration Engine Dashboard - V2 Rollout
+replicaCount: 2
 
 global:
   tier: production
