@@ -1,0 +1,13 @@
+# Staging Environment Override Configurations
+replicaCount: 1
+
+global:
+  tier: staging
+
+resources:
+  requests:
+    memory: "32Mi"
+    cpu: "50m"
+  limits:
+    memory: "64Mi"
+    cpu: "100m"

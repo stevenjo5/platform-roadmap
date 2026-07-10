@@ -1,0 +1,13 @@
+# Production Environment Override Configurations
+replicaCount: 4
+
+global:
+  tier: production
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "200m"
+  limits:
+    memory: "256Mi"
+    cpu: "400m"
