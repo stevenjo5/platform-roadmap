@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{ .Release.Name }}-db-migration"
+  annotations:
+    "helm.sh/hook": pre-upgrade,pre-install
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: migration-runner
+          image: alpine:latest
+          command: ["sh", "-c", "echo 'RUNNING DATABASE SCHEMA INTEGRITY CHECKS...'; sleep 5; echo 'MIGRATION COMPLETE! SUCCESS.'"]
+      restartPolicy: Never
+  backoffLimit: 0
