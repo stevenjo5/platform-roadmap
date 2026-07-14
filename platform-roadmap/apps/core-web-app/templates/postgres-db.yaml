@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-postgres
+  labels:
+    tier: {{ .Values.global.tier }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-postgres
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-postgres
+    spec:
+      containers:
+        - name: postgres-container
+          image: postgres:alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              value: "{{ .Values.localPostgres.database }}"
+            - name: POSTGRES_USER
+              value: "{{ .Values.localPostgres.username }}"
+            - name: POSTGRES_PASSWORD
+              value: "{{ .Values.localPostgres.password }}"

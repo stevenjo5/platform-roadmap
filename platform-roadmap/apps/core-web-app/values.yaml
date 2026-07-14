@@ -1,5 +1,5 @@
-# Centralized Variable Configuration Engine Dashboard - V2 Rollout
-replicaCount: 2
+# Clean Centralised Variable Engine Dashboard
+replicaCount: 3
 
 global:
   tier: production
@@ -21,3 +21,9 @@ resources:
 service:
   type: ClusterIP
   port: 80
+
+# Isolated Native Database Parameters
+localPostgres:
+  database: app_production_db
+  username: platform_sre_user
+  password: VaultSecureClusterPass77
