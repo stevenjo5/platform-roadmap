@@ -250,3 +250,9 @@
 - **Isolated Multi-Tenant Testing**: Validated isolation logic by segregating dynamic application workloads from cluster default environments.
 - **Multi-Resource Sandbox Auditing**: Utilized namespace-scoped query vectors to track the health of independent microservice stacks concurrently.
 - **Tools**: `Helm Target Scoping`, `Kubernetes Software Partitions`, `Multi-Tenant Infrastructure Management`.
+
+### Centralised Status Tracking & Release Monitoring (Day 98)
+- **Global Fleet Infrastructure Visibility**: Leveraged global multi-namespace query arguments (`helm list -A`) to locate active package footprints across the cluster.
+- **Deep-Dive Status Diagnostics**: Utilized structural `helm status` inspections to parse live metadata states and inventory components.
+- **Microservice Status Auditing**: Verified steady-state operational loops across detached workloads inside isolated application workspaces.
+- **Tools**: `Helm Fleet Visibility Tools`, `Multi-Namespace Auditing`, `Kubernetes Resource Tracking`.
