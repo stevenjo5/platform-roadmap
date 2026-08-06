@@ -286,3 +286,9 @@
 - **Multi-AZ Fault Isolation**: Partitioned network layers across 3 separate physical Availability Zones (`eu-west-2a/b/c`) to guarantee cluster high availability.
 - **Subnet Tier Architecture**: Established structural separations between public internet ingress lines and insulated private worker node environments.
 - **Tools**: `Terraform Engine Compilers`, `AWS VPC Infrastructure`, `Multi-AZ Network Design`.
+
+### Cloud Ingress, Egress Gateways, & Route Table Orchestration (Day 104)
+- **Edge Routing Engineering**: Provisioned public `Internet Gateways` to handle load balancer ingress traffic pools cleanly.
+- **Outbound Firewall Automation**: Programmed an `Elastic IP` anchored `NAT Gateway` to establish a one-way secure internet gateway.
+- **Route Table Association Mapping**: Linked multi-AZ subnet layers to independent public ingress and private NAT route matrix paths.
+- **Tools**: `Terraform Edge Routing`, `AWS NAT Infrastructure`, `Route Table Associations`.

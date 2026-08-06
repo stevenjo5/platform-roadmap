@@ -64,3 +64,78 @@ resource "aws_subnet" "private_az3" {
 
   tags = { Name = "platform-private-eu-west-2c" }
 }
+
+# ==========================================
+# EDGE GATEWAYS & ROUTING CONFIGURATIONS (Day 104)
+# ==========================================
+
+# 1. Provision an Internet Gateway for Public Ingress Communications
+resource "aws_internet_gateway" "platform_igw" {
+  vpc_id = aws_vpc.platform_vpc.id
+  tags   = { Name = "platform-production-igw" }
+}
+
+# 2. Allocate a Static Public IP (Elastic IP) to Anchor the NAT Gateway
+resource "aws_eip" "nat_eip" {
+  domain     = "vpc"
+  depends_on = [aws_internet_gateway.platform_igw]
+  tags       = { Name = "platform-nat-static-ip" }
+}
+
+# 3. Provision a Secure NAT Gateway Inside the First Public Subnet Area
+resource "aws_nat_gateway" "platform_nat" {
+  allocation_id = aws_eip.nat_eip.id
+  subnet_id     = aws_subnet.public_az1.id # Anchored securely inside public zone A
+  depends_on    = [aws_internet_gateway.platform_igw]
+  tags          = { Name = "platform-secure-nat-gateway" }
+}
+
+# 4. Formulate the Public Route Table (Points Direct to the Internet Bridge)
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.platform_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0" # Targets all external internet destinations
+    gateway_id = aws_internet_gateway.platform_igw.id
+  }
+  tags = { Name = "platform-public-route-table" }
+}
+
+# 5. Formulate the Private Route Table (Points Direct to the NAT Gateway Firewall)
+resource "aws_route_table" "private_rt" {
+  vpc_id = aws_vpc.platform_vpc.id
+
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.platform_nat.id
+  }
+  tags = { Name = "platform-private-route-table" }
+}
+
+# 6. Map the Public Subnets to the Public Ingress Route Table Matrix
+resource "aws_route_table_association" "public_assoc_1" {
+  subnet_id      = aws_subnet.public_az1.id
+  route_table_id = aws_route_table.public_rt.id
+}
+resource "aws_route_table_association" "public_assoc_2" {
+  subnet_id      = aws_subnet.public_az2.id
+  route_table_id = aws_route_table.public_rt.id
+}
+resource "aws_route_table_association" "public_assoc_3" {
+  subnet_id      = aws_subnet.public_az3.id
+  route_table_id = aws_route_table.public_rt.id
+}
+
+# 7. Map the Private Subnets to the Private Egress Route Table Matrix
+resource "aws_route_table_association" "private_assoc_1" {
+  subnet_id      = aws_subnet.private_az1.id
+  route_table_id = aws_route_table.private_rt.id
+}
+resource "aws_route_table_association" "private_assoc_2" {
+  subnet_id      = aws_subnet.private_az2.id
+  route_table_id = aws_route_table.private_rt.id
+}
+resource "aws_route_table_association" "private_assoc_3" {
+  subnet_id      = aws_subnet.private_az3.id
+  route_table_id = aws_route_table.private_rt.id
+}
